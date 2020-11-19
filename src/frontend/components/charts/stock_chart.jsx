@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'react-emotion';
-import StockRechartContainer from './stock_rechart_container';
+import StockRechart from './stock_rechart';
 import { ClipLoader } from 'react-spinners';
 
 const override = css`
@@ -108,8 +108,10 @@ class StockChart extends React.Component {
       <div>
       
         {
-          (Object.keys(stock).length > 31) ? (
-            <StockRechartContainer
+          (Object.keys(stock).length > 20) ? (
+            <StockRechart
+              ticker={this.props.ticker}
+              fetchStock5yData={this.props.fetchStock5yData}
               stock={stock}
               openPrice={openPrice}
               currPrice={currPrice}
@@ -124,7 +126,7 @@ class StockChart extends React.Component {
               color={color}
             />
           ) : (
-              <div className='sweet-loading'>
+              <div className='sweet-loading'>            
                 <ClipLoader
                   className={override}
                   sizeUnit={"px"}

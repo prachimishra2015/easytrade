@@ -101,7 +101,7 @@ class StockRechart extends React.Component {
 
   render5YChart() {
     if (!this.state.fetched5Y) {
-      this.props.fetchStock5yData(this.props.stock.ticker).then(() => {
+      this.props.fetchStock5yData(this.props.stock.symbol).then(() => {
         this.setState({ fetched5Y: true, active: '5Y' });
       });
     } else {

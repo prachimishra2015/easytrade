@@ -18,10 +18,10 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchStock: ticker => dispatch(fetchStock(ticker)),
-  fetchStockInfo: ticker => dispatch(fetchStockInfo(ticker)),
-  fetchStockIntradayData: ticker => dispatch(fetchStockIntradayData(ticker)),
-  fetchStockDailyData: ticker => dispatch(fetchStockDailyData(ticker)), 
+  // fetchStock: ticker => dispatch(fetchStock(ticker)),
+  // fetchStockInfo: ticker => dispatch(fetchStockInfo(ticker)),
+  // fetchStockIntradayData: ticker => dispatch(fetchStockIntradayData(ticker)),
+  // fetchStockDailyData: ticker => dispatch(fetchStockDailyData(ticker)), 
  
 });
 

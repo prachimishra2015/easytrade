@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import RootComponent from './frontend/easy_trade';
 import reportWebVitals from './reportWebVitals';
-
+import StockShow from './frontend/components/stocks/stock_show'
 ReactDOM.render(
   <React.StrictMode>
-    <RootComponent />
+   <StockShow ticker="AMZN"/>
+    {/* <RootComponent /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
